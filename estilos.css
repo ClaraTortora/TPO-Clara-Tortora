@@ -1,0 +1,562 @@
+/* ESTILOS GENERALES */
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Nixie One', cursive;
+}
+
+p,
+a,
+input,
+li,
+textarea {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*HEADER*/
+
+header .container {
+    padding: 20px;
+    background-color: rgba(219, 90, 90, 0.392);
+}
+
+.container .p-logo {
+    font-family: 'Ms Madi', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    text-shadow: 5px 5px 2px rgb(173, 173, 173);
+}
+
+.fa-moon {
+    padding: 5px;
+    color: rgb(239, 234, 210);
+    padding-top: 38px;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+/*SECTION 1*/
+
+#section-presentation {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url(imágenes/fondo-section1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 30px;
+    height: 105vh;
+}
+
+.container2 h1 {
+    text-decoration: 3px underline rgb(0, 0, 0);
+    color: white;
+    font-size: 2.6em;
+    
+}
+
+.container2 p {
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container2 span {
+    color: rgb(34, 162, 253);
+}
+
+.fa-hand-holding-hand {
+    padding-left: 8px;
+    color: burlywood;
+    width: 2px;
+}
+
+iframe {
+    margin-top: 80px;
+}
+
+/*SECTION 2*/
+
+#section-dudas h2 {
+    background-color: rgba(200, 101, 101, 0.434);
+    text-align: center;
+    padding: 30px;
+    font-size: 2.2em;
+    margin: 0;
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color:#8cc0de5c;
+    
+}
+
+
+/*----------CARTAS, COMIENZA ANIMACIÓN/TRANSFORMACIÓN-------------*/
+.wrap{
+    
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.tarjeta-wrap{
+    margin: 30px 30px;
+    -webkit-perspective: 750;
+    perspective: 750;
+    background-color: #FAF0D7;
+
+}
+
+.tarjeta-wrap h3{
+    font-size: 2em;
+}
+
+.tarjeta .detras{
+    visibility: hidden;
+}
+
+.tarjeta-wrap p{
+    font-family:'Nixie One', cursive;
+    font-weight: bold;
+    font-size: 1.10em;
+}
+
+.tarjeta{
+    width: 300px;
+    height: 350px;
+    background-image: url("imágenes/carta-tarot.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .6s ease-in;
+    box-shadow:0px 10px 15px -15px rgba(0, 0, 0, 0.752); 
+
+}
+
+.adelante, .atras{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.adelante{
+    width: 100%;
+}
+
+.atras{
+    transform: rotateY(180deg);
+}
+
+.tarjeta-wrap:hover .tarjeta{
+    transform: rotateY(180deg);
+
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #fff;
+    font-family: Verdana;
+}
+
+.card1{
+    background-image: url('imágenes/trabajo.png');
+    background-size:cover;
+    background-position: center;
+}
+
+.card2{
+    background-image: url('imágenes/avion.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card3{
+    background-image: url('imágenes/Amor-Nerea-Ballester.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/*CARTAS, TERMINA ANIMACIÓN/TRANSFORMACIÓN*/
+
+
+/*SECTION 3*/
+
+#section-formulario {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url(imágenes/fondo-formulario.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+    height: 110vh;
+    padding-left: 30px;
+}
+
+#section-formulario h2 {
+    color: white;
+    margin-bottom: 60px;
+    font-size: 1.8em;
+    text-decoration: 0.3em underline coral;
+    text-align: center;
+}
+
+form input,
+textarea {
+    border: 2px solid black;
+    padding: 9px;
+    padding-left: 0.3em;
+    margin: 9px;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    font-size: 1em;
+}
+
+input:hover {
+    border: 3px solid orange;
+}
+
+textarea {
+    padding: 2px;
+    padding-bottom: 40px;
+}
+
+textarea:hover {
+    border: 3px solid orange;
+}
+
+#btn {
+    margin: 30px auto;
+    padding: 5px;
+    width: 75px;
+    font-weight: bold;
+}
+
+#btn:hover {
+    background-color: rgba(219, 90, 90, 0.292);
+    color: white;
+}
+
+
+/*SECTION FOOTER*/
+
+footer {
+    background-color: black;
+    margin: 0;
+    padding: 10px;
+}
+
+footer p {
+    color: white;
+    padding: 30px;
+    margin: 1px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.container5 ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.container5 li {
+    color: white;
+    padding: 5px;
+}
+
+.container5 .fa-check {
+    color: green;
+}
+
+
+/* MEDIA QUERY */
+
+@media (min-width: 600px) {
+
+    /*SECTION 2 MEDIA QUERY - 3 PUNTOS DE CORTE. 300PX, 600PX, 1100PX)*/
+
+    .section-dudas h2 {
+        padding: 50px;
+        font-size: 2.5em;
+        height: 120vh;
+    }
+
+    .container3{
+        display: block;
+       
+
+    }
+
+/*----------CARTAS------------- MEDIA QUERY 600px*/ 
+
+
+.wrap{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    height: 60vh;
+    padding: 40px;
+}
+.tarjeta-wrap{
+ 
+    margin: 10px;
+    width: 190px;
+    height: 300px; 
+}
+
+.tarjeta{
+    width: 190px;
+    height: 300px;
+}
+}
+
+@media (min-width: 1100px) {
+    /* MEDIA QUERY ESCRITORIO - HEADER */
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 35px;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav a {
+        padding-left: 70px;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-decoration: underline white;
+    }
+
+    .container .p-logo {
+        font-size: 3em;
+        margin: 0;
+        padding-left: 30px;
+    }
+
+    .fa-moon {
+        padding: 5px;
+        color: rgb(239, 234, 210);
+        padding-top: 60px;
+        padding-left: 8px;
+    }
+
+    /*SECTION 1 MEDIA QUERY*/
+
+    .section-presentation {
+        height: 100vh;
+        background-attachment: fixed;
+        background-image: linear-gradient(0deg,
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)),
+            url(imágenes/fondo-section1.jpg);
+    }
+
+    .container2 h1 {
+        display: inline-block;
+        text-decoration: 8px underline rgb(0, 0, 0);
+        font-size: 5em;
+        margin-top: 60px;
+        padding-left: 50px;
+    }
+
+    .container2 p {
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .container2 span {
+        font-weight: bold;
+    }
+
+    .fa-hand-holding-hand {
+        padding-left: 25px;
+        color: burlywood;
+    }
+
+    iframe {
+        width: 600px;
+        height: 400px;
+    }
+
+    .p-div {
+        display: flex;
+        justify-content: left;
+    }
+
+    .iframe-div {
+        display: flex;
+        justify-content: right;
+    }
+
+
+    /*SECTION 2 - CORTE 1100PX*/
+
+    #section-dudas h2 {
+        padding: 80px;
+        font-size: 3.1em;
+    }
+    .container3{
+        background-color:#fbedc8e3 ;
+    }
+  
+    .wrap{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        padding: 150px;
+    }
+
+    .tarjeta-wrap{
+        margin: 10px;
+        width: 340px;
+        height: 110px; 
+        background-color: #5dabd98b;
+    }
+
+    .tarjeta{
+        width: 340px;
+        height: 400px;
+        background-image:linear-gradient(0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url("imágenes/carta-tarot.jpg") ;
+        box-shadow:5px 5px 7px rgba(0, 0, 0, 0.686);
+    }
+
+    .tarjeta .detras{
+        visibility: visible;
+        font-size: 3em;
+        color: white;
+        font-family:'Nixie One', cursive;
+        font-weight: bold;
+}
+    .tarjeta-wrap p{
+        visibility: hidden;
+    }
+
+
+
+    /*SECTION 3 - FORMULARIO*/
+
+    .section-formulario {
+        height: 90vh;
+    }
+
+    .section-formulario h2 {
+        font-size: 3.2em;
+        margin-bottom: 60px;
+        text-decoration: 4px underline coral;
+    }
+
+    .container4 {
+        justify-content: center;
+    }
+
+    form input,
+    textarea {
+        border: 2px solid black;
+        padding: 9px;
+        padding-left: 0.3em;
+        margin: 9px;
+        width: 50%;
+        font-size: 1.2em;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #btn {
+        width: 85px;
+        display: flex;
+        text-align: center;
+    }
+
+    /* FOOTER */
+
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: 30vh;
+    }
+
+    .container5 {
+        margin: 20px;
+        padding-right: 40px;
+    }
+
+    footer p {
+        font-size: 1em;
+        text-align: end;
+    }
+
+    ul {
+        font-weight: bold;
+        font-size: 1em;
+    }
+
+    .container5 li {
+        padding: 20px;
+    }
+}
